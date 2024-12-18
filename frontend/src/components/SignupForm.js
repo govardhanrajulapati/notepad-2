@@ -14,7 +14,7 @@ function SignupForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/users/signup', { name, email, password });
+      const response = await axios.post('https://notepad-2-imso.onrender.com/api/users/signup', { name, email, password });
       if(response.status === 201) {
         alert('Signup successful! Please log in.');
         navigate('/');
